@@ -1,1 +1,43 @@
-No Content: https://e2fe3f73-b0ac-4d97-ba55-f7fc3e3b93f5--1749405600--862a61f4.app.yourware.app/styles.css
+/* Main stylesheet for Kyoga-Nile Waterkeeper */
+
+/* Import home styles */
+
+@import url('home/styles.css');
+/* Additional styles for accessibility and performance optimizations */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.skip-link {
+    background: #2C5AA0;
+    color: white;
+    padding: 10px 20px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 2000;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Lazy loading styles */
+
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}

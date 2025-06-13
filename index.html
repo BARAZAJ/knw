@@ -4,34 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyoga-Nile Waterkeeper</title>
+    <meta name="description" content="Kyoga-Nile Waterkeeper - Clean water for healthy and wealthy communities through conservation, education, and community action.">
+    <title>Kyoga-Nile Waterkeeper - Clean Water for Healthy and Wealthy</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="home/styles.css">
+    <!-- Preload critical assets -->
+    <link rel="preload" href="home/styles.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
 </head>
 
 <body>
+    <!-- Accessibility skip link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-            <a href="#home" class="logo">
+            <a href="index.html" class="logo" aria-label="Kyoga-Nile Waterkeeper Home">
                 <div class="logo-icon">
-                    <i class="fas fa-water"></i>
+                    <img src="images/kyoga-nile-logo.png" alt="Kyoga-Nile Waterkeeper Logo" class="logo-image">
                 </div>
-                <span>Kyoga-Nile Waterkeeper</span>
+                <div class="logo-text">
+                    <span class="logo-name">Kyoga-Nile Waterkeeper</span>
+                    <span class="logo-tagline">Clean Water for Health and Wealth</span>
+                </div>
             </a>
-            <div class="hamburger">
+            <button class="hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#objectives" target="_blank">Objectives</a></li>
-                <li><a href="#blog" target="_blank">Blog</a></li>
-                <li><a href="#facts" target="_blank">Facts</a></li>
-                <li><a href="#partnership" target="_blank">Partnership</a></li>
+                <span class="visually-hidden">Menu</span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="objectives.html">Objectives</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="facts.html">Facts</a></li>
+                <li><a href="partnership.html">Partnership</a></li>
             </ul>
         </div>
     </nav>
@@ -42,9 +52,9 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="container">
-            <div class="hero-content">
+            <div id="main-content" class="hero-content">
                 <div class="hero-badge">
-                    <i class="fas fa-leaf"></i>
+                    <i class="fas fa-leaf" aria-hidden="true"></i>
                     <span>Conservation • Protection • Community</span>
                 </div>
                 <h1 class="hero-title">
@@ -58,12 +68,12 @@
                         <span class="stat-number">13,000</span>
                         <span class="stat-label">km² Protected</span>
                     </div>
-                    <div class="stat-divider"></div>
+                    <div class="stat-divider" aria-hidden="true"></div>
                     <div class="stat-item">
                         <span class="stat-number">300M+</span>
                         <span class="stat-label">Lives Impacted</span>
                     </div>
-                    <div class="stat-divider"></div>
+                    <div class="stat-divider" aria-hidden="true"></div>
                     <div class="stat-item">
                         <span class="stat-number">11</span>
                         <span class="stat-label">Countries United</span>
@@ -71,18 +81,18 @@
                 </div>
 
                 <div class="hero-actions">
-                    <a href="#objectives" class="btn-primary">
-                        <span>Join Our Mission</span>
-                        <i class="fas fa-arrow-right"></i>
+                    <a href="objectives.html" class="btn-primary">
+                        <span>Our Mission</span>
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </a>
                     <a href="#work" class="btn-secondary">
-                        <i class="fas fa-play"></i>
+                        <i class="fas fa-play" aria-hidden="true"></i>
                         <span>See Our Impact</span>
                     </a>
                 </div>
             </div>
 
-            <div class="hero-scroll-indicator">
+            <div class="hero-scroll-indicator" aria-hidden="true">
                 <div class="scroll-arrow">
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -100,7 +110,7 @@
                     <p>Working directly with Uganda communities to protect our precious water resources</p>
                 </div>
                 <div class="impact-badge">
-                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart" aria-hidden="true"></i>
                     <span>Community-Driven Conservation</span>
                 </div>
             </div>
@@ -115,51 +125,51 @@
                 <p class="section-subtitle">Three pillars driving our conservation efforts across Uganda's waterways</p>
             </div>
             <div class="objectives-grid">
-                <div class="objective-card">
+                <div class="objective-card" data-aos="fade-up">
                     <div class="card-header">
                         <div class="objective-icon">
-                            <i class="fas fa-shield-alt"></i>
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
                         </div>
                         <div class="card-number">01</div>
                     </div>
                     <h3>Protect & Preserve</h3>
                     <p>Safeguarding the natural ecosystem of Lake Kyoga and River Nile through sustainable environmental protection and active community engagement across Uganda.</p>
                     <div class="card-footer">
-                        <a href="#work" class="learn-more">
+                        <a href="objectives.html" class="learn-more">
                             <span>Learn More</span>
-                            <i class="fas fa-arrow-right"></i>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
-                <div class="objective-card featured">
+                <div class="objective-card featured" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-header">
                         <div class="objective-icon">
-                            <i class="fas fa-bullhorn"></i>
+                            <i class="fas fa-bullhorn" aria-hidden="true"></i>
                         </div>
                         <div class="card-number">02</div>
                     </div>
                     <h3>Raise Awareness</h3>
                     <p>Promoting understanding of the importance of River Nile and Lake Kyoga by educating local communities about environmental protection and sustainable practices.</p>
                     <div class="card-footer">
-                        <a href="#blog" class="learn-more">
+                        <a href="blog.html" class="learn-more">
                             <span>Learn More</span>
-                            <i class="fas fa-arrow-right"></i>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
-                <div class="objective-card">
+                <div class="objective-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-header">
                         <div class="objective-icon">
-                            <i class="fas fa-handshake"></i>
+                            <i class="fas fa-handshake" aria-hidden="true"></i>
                         </div>
                         <div class="card-number">03</div>
                     </div>
                     <h3>Build Partnerships</h3>
                     <p>Collaborating with government agencies and organizations to develop strong alliances, strengthening our conservation efforts through strategic partnerships.</p>
                     <div class="card-footer">
-                        <a href="#partnership" class="learn-more">
+                        <a href="partnership.html" class="learn-more">
                             <span>Learn More</span>
-                            <i class="fas fa-arrow-right"></i>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -175,60 +185,105 @@
                 <p class="section-subtitle">Discover the latest developments in our conservation work and community impact</p>
             </div>
             <div class="blog-grid">
-                <div class="blog-card featured">
+                <div class="blog-card featured" data-aos="fade-up">
                     <div class="blog-image">
-                        <img src="images/kyoga2.jpg" alt="River Nile">
+                        <img src="images/kyoga2.jpg" alt="Aerial view of River Nile" class="lazy-load" loading="lazy">
                         <div class="blog-category">Ecosystem</div>
                     </div>
                     <div class="blog-content">
                         <span class="date">March 2024</span>
                         <h3>The Vital Role of River Nile in Uganda's Ecosystem</h3>
                         <p>Exploring how the River Nile supports biodiversity and local communities across Uganda, and why its protection is crucial for our future.</p>
-                        <a href="blog/river-nile-ecosystem.html" class="read-more">
+                        <a href="blog.html" class="read-more">
                             <span>Read Full Story</span>
-                            <i class="fas fa-arrow-right"></i>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
-                <div class="blog-card">
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="blog-image">
-                        <img src="images/lake.jpg" alt="Lake Conservation">
+                        <img src="images/lake.jpg" alt="Lake Kyoga conservation area" class="lazy-load" loading="lazy">
                         <div class="blog-category">Conservation</div>
                     </div>
                     <div class="blog-content">
                         <span class="date">February 2024</span>
                         <h3>Lake Kyoga Conservation Initiatives</h3>
                         <p>Our ongoing efforts to protect Lake Kyoga's unique wetland ecosystem and wildlife through community-based conservation programs.</p>
-                        <a href="blog/lake-kyoga-conservation.html" class="read-more">
+                        <a href="blog.html" class="read-more">
                             <span>Read More</span>
-                            <i class="fas fa-arrow-right"></i>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
-                <div class="blog-card">
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="blog-image">
-                        <img src="images/bird.jpg" alt="Community Conservation">
+                        <img src="images/bird.jpg" alt="Bird in the Lake Kyoga ecosystem" class="lazy-load" loading="lazy">
                         <div class="blog-category">Community</div>
                     </div>
                     <div class="blog-content">
                         <span class="date">January 2024</span>
                         <h3>Community-Led Water Conservation</h3>
                         <p>How local communities are taking action to protect their water sources and implementing sustainable practices in their daily lives.</p>
-                        <a href="blog/community-led-conservation.html" class="read-more">
+                        <a href="blog.html" class="read-more">
                             <span>Read More</span>
-                            <i class="fas fa-arrow-right"></i>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="view-all">
-                <a href="blog/index.html" class="btn-secondary">
+                <a href="blog.html" class="btn-secondary">
                     <span>View All Stories</span>
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
     </section>
+
+    <!-- Interactive Map Section -->
+    <section id="conservation-map" class="conservation-map">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Conservation Areas</h2>
+                <p class="section-subtitle">Explore the regions where we're making a difference across Uganda</p>
+            </div>
+            <div class="map-container" data-aos="fade-up">
+                <div class="map-wrapper">
+                    <div id="conservation-interactive-map"></div>
+                </div>
+                <div class="map-info">
+                    <div class="map-region active" data-region="kyoga">
+                        <h3>Lake Kyoga Region</h3>
+                        <p>Central Uganda's largest lake, supporting countless communities and unique biodiversity.</p>
+                        <ul class="map-highlights">
+                            <li><i class="fas fa-fish" aria-hidden="true"></i> 200+ Fish Species</li>
+                            <li><i class="fas fa-users" aria-hidden="true"></i> 50+ Communities Served</li>
+                            <li><i class="fas fa-seedling" aria-hidden="true"></i> 15 Restoration Projects</li>
+                        </ul>
+                    </div>
+                    <div class="map-region" data-region="nile">
+                        <h3>River Nile Watershed</h3>
+                        <p>The world's longest river, flowing north from Lake Victoria through Uganda and beyond.</p>
+                        <ul class="map-highlights">
+                            <li><i class="fas fa-water" aria-hidden="true"></i> 6,650 km Length</li>
+                            <li><i class="fas fa-globe-africa" aria-hidden="true"></i> 11 Countries Connected</li>
+                            <li><i class="fas fa-hand-holding-water" aria-hidden="true"></i> 300M+ People Supported</li>
+                        </ul>
+                    </div>
+                    <div class="map-region" data-region="wetlands">
+                        <h3>Surrounding Wetlands</h3>
+                        <p>Critical buffer zones that filter water and provide habitat for countless species.</p>
+                        <ul class="map-highlights">
+                            <li><i class="fas fa-tree" aria-hidden="true"></i> 30+ Plant Species</li>
+                            <li><i class="fas fa-feather" aria-hidden="true"></i> 100+ Bird Species</li>
+                            <li><i class="fas fa-tint" aria-hidden="true"></i> Natural Water Filtration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Facts Section -->
     <section id="facts" class="facts">
         <div class="container">
@@ -237,33 +292,33 @@
                 <p class="section-subtitle">Understanding the scale and importance of Uganda's water resources</p>
             </div>
             <div class="facts-grid">
-                <div class="fact-card">
+                <div class="fact-card" data-aos="fade-up">
                     <div class="fact-icon">
-                        <i class="fas fa-water"></i>
+                        <i class="fas fa-water" aria-hidden="true"></i>
                     </div>
                     <h3 class="counter" data-target="13000">0</h3>
                     <p class="fact-label">km² - Lake Kyoga surface area</p>
                     <div class="fact-description">One of Uganda's largest lakes, supporting countless communities</div>
                 </div>
-                <div class="fact-card">
+                <div class="fact-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="fact-icon">
-                        <i class="fas fa-route"></i>
+                        <i class="fas fa-route" aria-hidden="true"></i>
                     </div>
                     <h3 class="counter" data-target="6650">0</h3>
                     <p class="fact-label">km - River Nile total length</p>
                     <div class="fact-description">The world's longest river, flowing through East Africa</div>
                 </div>
-                <div class="fact-card">
+                <div class="fact-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="fact-icon">
-                        <i class="fas fa-globe-africa"></i>
+                        <i class="fas fa-globe-africa" aria-hidden="true"></i>
                     </div>
                     <h3 class="counter" data-target="11">0</h3>
                     <p class="fact-label">Countries depend on the Nile</p>
                     <div class="fact-description">A vital water source for millions across the region</div>
                 </div>
-                <div class="fact-card">
+                <div class="fact-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="fact-icon">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-users" aria-hidden="true"></i>
                     </div>
                     <h3 class="counter" data-target="300">0</h3>
                     <p class="fact-label">Million people rely on the Nile waters</p>
@@ -281,43 +336,43 @@
                 <p class="section-subtitle">Hands-on protection efforts making a real difference across Uganda</p>
             </div>
             <div class="work-grid">
-                <div class="work-card">
+                <div class="work-card" data-aos="fade-up">
                     <div class="work-image">
-                        <img src="images/clouds.jpg" alt="River Nile Protection">
+                        <img src="images/clouds.jpg" alt="River Nile landscape with clouds" class="lazy-load" loading="lazy">
                         <div class="work-overlay">
                             <div class="work-content">
                                 <h3>River Nile Protection</h3>
                                 <p>Safeguarding the world's longest river through community partnerships and sustainable practices</p>
                                 <div class="work-stats">
-                                    <span><i class="fas fa-leaf"></i> 50+ Communities Engaged</span>
+                                    <span><i class="fas fa-leaf" aria-hidden="true"></i> 50+ Communities Engaged</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="work-card">
+                <div class="work-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="work-image">
-                        <img src="images/lake.jpg" alt="Lake Kyoga Conservation">
+                        <img src="images/lake.jpg" alt="Lake Kyoga wetlands" class="lazy-load" loading="lazy">
                         <div class="work-overlay">
                             <div class="work-content">
                                 <h3>Lake Kyoga Conservation</h3>
                                 <p>Protecting Uganda's vital wetland ecosystem and its incredible biodiversity</p>
                                 <div class="work-stats">
-                                    <span><i class="fas fa-fish"></i> 200+ Species Protected</span>
+                                    <span><i class="fas fa-fish" aria-hidden="true"></i> 200+ Species Protected</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="work-card">
+                <div class="work-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="work-image">
-                        <img src="images/trees.jpg" alt="Wildlife Protection">
+                        <img src="images/trees.jpg" alt="Riverside forest in Uganda" class="lazy-load" loading="lazy">
                         <div class="work-overlay">
                             <div class="work-content">
                                 <h3>Wildlife Protection</h3>
                                 <p>Protecting Uganda's aquatic wildlife and maintaining ecological balance</p>
                                 <div class="work-stats">
-                                    <span><i class="fas fa-paw"></i> Habitat Restoration</span>
+                                    <span><i class="fas fa-paw" aria-hidden="true"></i> Habitat Restoration</span>
                                 </div>
                             </div>
                         </div>
@@ -331,9 +386,9 @@
     <section class="community-impact">
         <div class="container">
             <div class="impact-content">
-                <div class="impact-text">
+                <div class="impact-text" data-aos="fade-right">
                     <div class="impact-badge">
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart" aria-hidden="true"></i>
                         <span>Community Impact</span>
                     </div>
                     <h2>Empowering Local Communities</h2>
@@ -352,24 +407,24 @@
                             <span class="metric-label">Districts Reached</span>
                         </div>
                     </div>
-                    <a href="#partnership" class="btn-primary">
-                        <span>Get Involved</span>
-                        <i class="fas fa-arrow-right"></i>
+                    <a href="partnership.html" class="btn-primary">
+                        <span>Our Partners</span>
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="impact-visual">
+                <div class="impact-visual" data-aos="fade-left">
                     <div class="impact-card">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                         <h4>Education Programs</h4>
                         <p>Teaching sustainable practices</p>
                     </div>
                     <div class="impact-card">
-                        <i class="fas fa-tools"></i>
+                        <i class="fas fa-tools" aria-hidden="true"></i>
                         <h4>Skills Training</h4>
                         <p>Building local capacity</p>
                     </div>
                     <div class="impact-card">
-                        <i class="fas fa-seedling"></i>
+                        <i class="fas fa-seedling" aria-hidden="true"></i>
                         <h4>Restoration Projects</h4>
                         <p>Healing damaged ecosystems</p>
                     </div>
@@ -378,63 +433,66 @@
         </div>
     </section>
 
-    <!-- Partnership Section -->
-    <section id="partnership" class="partnership">
-        <div class="container">
-            <div class="partnership-content">
-                <div class="partnership-text">
-                    <h2>Partnership & Collaboration</h2>
-                    <p>We develop deep partnerships with local and international organizations to strengthen our conservation efforts. Together, we can achieve greater impact in protecting Uganda's precious water resources.</p>
-                    <div class="partnership-benefits">
-                        <div class="benefit">
-                            <i class="fas fa-hands-helping"></i>
-                            <span>Collaborative Impact</span>
-                        </div>
-                        <div class="benefit">
-                            <i class="fas fa-globe"></i>
-                            <span>Global Reach</span>
-                        </div>
-                        <div class="benefit">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Measurable Results</span>
-                        </div>
-                    </div>
-                    <a href="mailto:kyoganilewaterkeeper@gmail.com" class="btn-primary">
-                        <span>Partner With Us</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Join Section -->
     <section id="join" class="join">
         <div class="container">
-            <div class="join-content">
+            <div class="join-content" data-aos="fade-up">
                 <h2>Join Our Conservation Mission</h2>
                 <p>Be part of the movement to protect Lake Kyoga and River Nile. Every action counts in preserving these vital water sources for future generations.</p>
                 <div class="join-options">
                     <div class="join-option">
-                        <i class="fas fa-hands-helping"></i>
+                        <i class="fas fa-hands-helping" aria-hidden="true"></i>
                         <h4>Volunteer</h4>
                         <p>Join our field work and community programs by emailing us at <a href="mailto:kyoganilewaterkeeper@gmail.com">kyoganilewaterkeeper@gmail.com</a></p>
                     </div>
                     <div class="join-option">
-                        <i class="fas fa-donate"></i>
-                        <h4>Donate</h4>
-                        <p>Support our conservation efforts financially</p>
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
+                        <h4>Partner</h4>
+                        <p>Collaborate with us on conservation efforts</p>
+                        <a href="partnership.html" class="join-action">Learn about partnerships</a>
                     </div>
                     <div class="join-option">
-                        <i class="fas fa-share-alt"></i>
+                        <i class="fas fa-share-alt" aria-hidden="true"></i>
                         <h4>Spread Awareness</h4>
                         <p>Share our mission with your networks</p>
+                        <div class="share-buttons">
+                            <a href="#" aria-label="Share on Facebook" class="share-btn"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="Share on Twitter" class="share-btn"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="Share on LinkedIn" class="share-btn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                 </div>
                 <a href="mailto:kyoganilewaterkeeper@gmail.com" class="btn-primary">
                     <span>Get Involved Today</span>
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-container" data-aos="fade-up">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter for the latest updates on our conservation efforts and upcoming events.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address" required aria-label="Email address">
+                        <button type="submit" class="btn-primary">
+                            <span>Subscribe</span>
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="form-privacy">
+                        <label class="privacy-label">
+                            <input type="checkbox" required>
+                            <span>I agree to receive email updates and accept the <a href="#">privacy policy</a></span>
+                        </label>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -446,52 +504,69 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <div class="logo-icon">
-                            <i class="fas fa-water"></i>
+                            <img src="images/kyoga-nile-logo.png" alt="Kyoga-Nile Waterkeeper Logo" class="footer-logo-image">
                         </div>
-                        <span>Kyoga-Nile Waterkeeper</span>
+                        <div class="footer-logo-text">
+                            <span class="footer-logo-name">Kyoga-Nile Waterkeeper</span>
+                            <span class="footer-logo-tagline">Clean Water for Healthy and Wealthy</span>
+                        </div>
                     </div>
                     <p>Protecting, preserving and conserving Uganda's precious waters for current and future generations.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#objectives">Our Mission</a></li>
+                        <li><a href="objectives.html">Our Mission</a></li>
                         <li><a href="#work">Conservation Work</a></li>
-                        <li><a href="#blog">Latest News</a></li>
-                        <li><a href="#partnership">Partnerships</a></li>
+                        <li><a href="blog.html">Latest News</a></li>
+                        <li><a href="partnership.html">Partnerships</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Get Involved</h4>
                     <ul>
                         <li><a href="mailto:kyoganilewaterkeeper@gmail.com">Volunteer</a></li>
-                        <li><a href="#">Donate</a></li>
+                        <li><a href="partnership.html">Partner With Us</a></li>
                         <li><a href="#">Events</a></li>
-                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#" class="newsletter-link">Newsletter</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:kyoganilewaterkeeper@gmail.com">kyoganilewaterkeeper@gmail.com</a></p>
-                        <p><i class="fas fa-phone"></i> +256 (0) 123 456 789</p>
+                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Kampala, Uganda</p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:kyoganilewaterkeeper@gmail.com">kyoganilewaterkeeper@gmail.com</a></p>
+                        <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+256123456789">+256 (0) 123 456 789</a></p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Kyoga-Nile Waterkeeper. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Back to top button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script src="home/script.js"></script>
+    <script src="home/enhanced-script.js"></script>
 </body>
 
 </html>
